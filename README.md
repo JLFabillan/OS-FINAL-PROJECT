@@ -1,36 +1,47 @@
-# 🚨 911 OS Dispatch Simulator
+# 🚨 CRISIS-LINK // 911 OS Dispatch Capstone
 
-A comprehensive, interactive Operating Systems simulator themed around a 911 Emergency Dispatch Center. This desktop application was developed as a final project for BS Computer Engineering to demonstrate the practical, real-world application of core OS resource management algorithms.
+**CRISIS-LINK** is a comprehensive, interactive Operating Systems simulator themed around a high-stakes 911 Computer Aided Dispatch (CAD) terminal. Developed as a final capstone project for BS Computer Engineering, this application demonstrates the practical, real-world application of core OS resource management algorithms.
 
-Instead of abstract numbers, this system maps traditional OS concepts to physical dispatch logistics:
-* **Processes** $\rightarrow$ Incoming 911 Emergencies
-* **CPU** $\rightarrow$ Emergency Response Units
-* **RAM** $\rightarrow$ Dispatcher Radio/Video Bandwidth
-* **Virtual Pages** $\rightarrow$ Active Dispatcher Dashboard Monitors
-* **Disk Head** $\rightarrow$ Drone/Patrol Car Routing
+Rather than displaying abstract textbook numbers, this system maps traditional OS hardware concepts to physical emergency dispatch logistics in a sleek, DPI-aware 2x2 dark-themed dashboard.
 
-## ⚙️ Core OS Implementations
+## ⚙️ Core OS Implementations (The 4 Modules)
 
-The dashboard features five dynamic modules:
+### 1. CPU Dispatcher (Process Scheduling)
+* **Analogy:** Incoming 911 emergencies queued for dispatcher attention.
+* **Algorithms:** FCFS, SJF (Preemptive/Non-Preemptive), Priority (Preemptive/Non-Preemptive), Round Robin.
+* **Features:** Dynamically generated Matplotlib Gantt charts outlining exact time-unit execution boundaries and context switching.
 
-1. **CPU Scheduling:** Preemptive and non-preemptive task management with live Gantt chart generation. *(FCFS, SJF, SRTF, Round Robin)*
-2. **Memory Management:** Dynamic bandwidth allocation and fragmentation resolution. *(MVT/MFT, First/Best/Worst Fit, Compaction)*
-3. **Virtual Memory:** Page replacement simulation for limited dispatcher monitors. *(FIFO, LRU, Optimal, Second Chance/Clock, LFU, MFU)*
-4. **Disk Scheduling (Virtual Memory):** Optimal physical routing paths for response units, calculating total track count. *(SSTF)*
-5. **Mass Storage Management:** Permanent archiving of resolved case files into physical disk blocks. *(Contiguous, Linked, Indexed Allocation)*
+### 2. Active Memory (RAM Allocation)
+* **Analogy:** Deploying continuous blocks of physical emergency responder fleets.
+* **Algorithms:** MVT (Variable) and MFT (Fixed) using First Fit, Best Fit, and Worst Fit.
+* **Features:** Real-time RAM block visualizations tracking internal/external fragmentation, complete with a manual **Memory Compaction** engine to consolidate free holes.
 
-## 🛠️ Prerequisites
+### 3. Virtual Memory Unit (Demand Paging)
+* **Analogy:** Dispatchers caching databank incident files onto a limited number of active monitors (frames).
+* **Algorithms:** FIFO, OPT, LRU, LFU, MFU.
+* **Features:** Trace-graph analytics tracking Absolute Dispatch Faults vs. Buffer Hits to calculate cache efficiency rates.
 
-To run this application, you will need the following installed on your machine:
-* **Python 3.8+**
-* **Tkinter** (Usually comes pre-installed with Python. Linux users may need to run `sudo apt-get install python3-tk`)
-* **Matplotlib** (For rendering the dynamic Gantt charts and memory/routing graphs)
+### 4. Multi-Disk Router (Mass Storage / Disk Scheduling)
+* **Analogy:** Routing autonomous emergency drones across physical city cylinder sectors.
+* **Algorithms:** FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK.
+* **Features:** Visual flight sweep paths calculating the absolute total track distance/seek time to optimize response vectors.
 
-## 🚀 Installation & Setup
+## 🛠️ Technology Stack
+* **Language:** Python 3.8+
+* **GUI Framework:** Tkinter (Configured with `ctypes` for crisp Windows High-DPI scaling and custom Segoe UI / Consolas typography).
+* **Data Visualization:** Matplotlib / FigureCanvasTkAgg
+* **Distribution:** PyInstaller (Standalone `.exe` compilation)
 
-Follow these steps to get the simulator running on your local machine:
+## 🚀 How to Run the Simulator
+
+### Option A: Run the Standalone Executable (No Install Required)
+1. Download the `CRISIS_LINK_Dispatch.exe` file from the repository releases/dist folder.
+2. Double-click the application to launch. *(Note: Because it is packed with Matplotlib, the initial launch may take 3-8 seconds to unpack into memory).*
+
+### Option B: Run from Source Code
+If you wish to modify the algorithms or run the raw Python scripts, follow these steps:
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/yourusername/911-OS-Dispatch.git](https://github.com/yourusername/911-OS-Dispatch.git)
-cd 911-OS-Dispatch
+git clone [https://github.com/yourusername/CRISIS-LINK-OS-Dispatch.git](https://github.com/yourusername/CRISIS-LINK-OS-Dispatch.git)
+cd CRISIS-LINK-OS-Dispatch
