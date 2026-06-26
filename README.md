@@ -1,6 +1,6 @@
-# 🚨 CRISIS-LINK // 911 OS Dispatch Capstone
+# 🚨 911 OS Dispatch 
 
-**CRISIS-LINK** is a comprehensive, interactive Operating Systems simulator themed around a high-stakes 911 Computer Aided Dispatch (CAD) terminal. Developed as a final capstone project for BS Computer Engineering, this application demonstrates the practical, real-world application of core OS resource management algorithms.
+This project is a comprehensive, interactive Operating Systems simulator themed around a high-stakes 911 Computer Aided Dispatch (CAD) terminal. Developed as a final capstone project for BS Computer Engineering, this application demonstrates the practical, real-world application of core OS resource management algorithms.
 
 Rather than displaying abstract textbook numbers, this system maps traditional OS hardware concepts to physical emergency dispatch logistics in a sleek, DPI-aware 2x2 dark-themed dashboard.
 
